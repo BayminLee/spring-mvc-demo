@@ -1,0 +1,57 @@
+div.gridbox_dhx_skyblue{
+	border-color: #dcdcdc;
+}
+div.gridbox_dhx_skyblue .ftr, div.gridbox_dhx_skyblue .xhdr{
+	background: none;
+}
+div.gridbox_dhx_skyblue table.hdr {
+    border-collapse: collapse;
+}
+div.gridbox_dhx_skyblue table.hdr tr{
+	background: #f3f4f5;
+}
+div.gridbox_dhx_skyblue table.hdr td{
+	height: 38px;
+	border: 0;
+	border-bottom: 1px solid #d9d9e6;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #222;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #fafafa;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+div.gridbox_dhx_skyblue table.hdr td div.hdrcell{
+	padding-left: 0;
+}
+div.gridbox_dhx_skyblue .odd_dhx_skyblue{
+	background-color: #fff;
+}
+div.gridbox_dhx_skyblue table.obj tr td{
+	height: 36px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #222;
+	border-bottom: 1px solid #eee;
+}
+div.gridbox_dhx_skyblue table.obj tr td a{
+	color: #226de1;
+	text-decoration: underline;
+}
+div.gridbox_dhx_skyblue table.obj tr.rowselected,
+div.gridbox_dhx_skyblue table.obj tr.rowselected td,
+div.gridbox_dhx_skyblue table.row20px.obj tr.rowselected td,
+div.gridbox_dhx_skyblue table.obj tr.rowselected td.cellselected{
+	background: #ffefae;
+	color: #222;
+}
+.gridbox_dhx_skyblue .dhx_combo_edit{
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 36px;
+}

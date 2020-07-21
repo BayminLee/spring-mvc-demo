@@ -1,0 +1,26 @@
+.dhx_tablist_zone{
+	background: #f0f0f0;
+}
+.dhx_tablist_line{
+	background-color: #d2d2d2;
+}
+.dhx_tabbar_zone_top .dhx_tab_element{
+	padding-top: 0;
+}
+.dhx_tab_element{
+	background: url(images/tab1.png) no-repeat left bottom;
+	font-family:"微软雅黑";
+	font-size: 14px;
+	line-height: 27px;
+	color: #666;
+	margin-top: 3px;
+	text-align: left;
+	text-indent: 26px;
+}
+.dhx_tab_element_active{
+	background-image: url(images/tab2.png);
+	color: #fff;
+}
+.dhx_tabcontent_zone{
+	border: 0;
+}

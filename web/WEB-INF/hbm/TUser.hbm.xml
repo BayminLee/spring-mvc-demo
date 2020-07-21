@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.tdh.jzgl.entity.TUser" table="T_USER">
+        <id name="yhdm" column="YHDM"/>
+        <property name="dwdm" column="DWDM"/>
+        <property name="yhid" column="YHID"/>
+        <property name="yhxm" column="YHXM"/>
+        <property name="yhkl" column="YHKL"/>
+        <property name="yhxb" column="YHXB"/>
+        <property name="yhbm" column="YHBM"/>
+        <property name="csrq" column="CSRQ"/>
+        <property name="djsj" column="DJSJ"/>
+        <property name="yhtx" column="YHTX"/>
+        <property name="sfjy" column="SFJY"/>
+        <property name="pxh" column="PXH"/>
+    </class>
+</hibernate-mapping>

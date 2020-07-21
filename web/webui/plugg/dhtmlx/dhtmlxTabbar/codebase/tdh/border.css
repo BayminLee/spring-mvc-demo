@@ -1,0 +1,25 @@
+.dhx_tablist_line{
+	background-color: #e9e9e9;
+}
+.dhx_tabbar_zone_top .dhx_tab_element{
+	padding-top: 0;
+}
+.dhx_tab_element{
+	background: none;
+	font-family:"微软雅黑";
+	font-size: 14px;
+	line-height: 38px;
+	color: #666;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+.dhx_tab_element_active{
+	background:none;
+	color: #226de1;
+	border-bottom-color: #226de1;
+}
+.dhx_tabcontent_zone{
+	border: 0;
+}
