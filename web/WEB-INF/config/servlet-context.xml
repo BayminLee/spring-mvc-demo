@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
-
+<!--扫描注解，自动装配-->
 	<!--配置包扫描路径-->
 	<context:component-scan base-package="com.tdh.jzgl.controller" />
 	<context:component-scan base-package="com.tdh.jzgl.service" />

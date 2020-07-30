@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Description: 视图层控制器
  *
@@ -19,18 +21,19 @@ public class JspViewController {
 
     /**
      * 打开主页面
-     * @return
+     * @return model and view
      * @throws Exception
      * @author wudb
      * @date 2020-07-20
      */
     @RequestMapping("/user.do")
     public ModelAndView getUser() {
-        ModelAndView mav = new ModelAndView();
+        ModelAndView mav = new ModelAndView("user");
         //webapp/userManager/user.jsp
         mav.setViewName("/userManager/user");
         return mav;
     }
+
 
     /**
      * 打开用户信息页面

@@ -21,7 +21,7 @@ public class TUser {
     private String djsj;
     private byte[] yhtx;
     private String sfjy;
-    private Short pxh;
+    private Integer pxh;
 
     public String getYhdm() {
         return yhdm;
@@ -111,11 +111,11 @@ public class TUser {
         this.sfjy = sfjy;
     }
 
-    public Short getPxh() {
+    public Integer getPxh() {
         return pxh;
     }
 
-    public void setPxh(Short pxh) {
+    public void setPxh(Integer pxh) {
         this.pxh = pxh;
     }
 }

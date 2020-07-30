@@ -1,8 +1,18 @@
 package com.tdh.jzgl.util;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Description: ADD Description(可选). <br/>
@@ -14,6 +24,9 @@ import java.io.UnsupportedEncodingException;
  * 2020-7-13 15:27  use      1.0        1.0 Version
  */
 public class CommonUtil {
+    @Autowired
+    @Qualifier("hibernateTemplate")
+    private HibernateTemplate hibernateTemplate;
     /**
      * TRIM 将字符串对象去空格或者NULL对象变""
      *
@@ -106,5 +119,33 @@ public class CommonUtil {
             return rootPath;
         }
 
+    }
+    public static String dateFormate (String date, String pattern, String parttern1) throws Exception{
+        SimpleDateFormat format = new SimpleDateFormat(pattern);
+        Date date1 = format.parse(date);
+        SimpleDateFormat format1 = new SimpleDateFormat(parttern1);
+        return format1.format(date1);
+
+    }
+    public static boolean isContainUsers(String yhbm){
+        Connection conn = null;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        int count = 0;
+        try{
+            conn = JDBCUtils.getConnection();
+            pst = conn.prepareStatement("SELECT COUNT(1) FROM T_USER WHERE YHBM=?");
+            pst.setString(1,yhbm);
+            rs = pst.executeQuery();
+            while (rs.next()){
+                count = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtils.close(conn,pst,null);
+        }
+        return count>0?true:false;
     }
 }

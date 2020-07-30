@@ -16,7 +16,7 @@
             </list>
         </property>
     </bean>
-
+    <!--事务管理器-->
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 
     <!--  配置数据源  -->
@@ -26,7 +26,7 @@
         <property name="username" value="${user}" />
         <property name="password" value="${password}" />
     </bean>
-
+    <!--    -->
     <bean name="sessionFactory"
           class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
@@ -37,6 +37,7 @@
         </property>
         <property name="hibernateProperties">
             <props>
+                <!--数据库方言-->
                 <prop key="hibernate.dialect">org.hibernate.dialect.SybaseDialect</prop>
                 <prop key="show_sql">true</prop>
                 <prop key="hibernate.cache.use_query_cache">true</prop>

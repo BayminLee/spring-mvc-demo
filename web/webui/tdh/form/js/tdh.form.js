@@ -446,6 +446,7 @@ function checkDisable(obj,value){
 	}
 }
 //动态设置选中下拉框值
+//setSelVal($("#yhbm"),res.YHBM)
 function setSelVal(obj,value){
 	var selObj=ifdom(obj);
 	if(selObj.attr('multiple')){
